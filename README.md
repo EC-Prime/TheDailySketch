@@ -2,11 +2,9 @@
 
 A responsive newspaper front page built with pure HTML and CSS Grid, as part of freeCodeCamp's Responsive Web Design certification.
 
-**[Live Demo](https://dailysketch21.netlify.app/)** ·
+**[Live Demo](https://dailysketch21.netlify.app/)**
 
-![preview](<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/3968d25c-ae72-4e2a-93c0-2157f58c5547" />
-)
-*(add a screenshot of the layout here)*
+![preview](Screenshot.PNG)
 
 ## Overview
 
