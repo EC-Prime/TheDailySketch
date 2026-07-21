@@ -1,0 +1,135 @@
+*, ::before, ::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.newspaper-layout{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr 1fr;
+    grid-template-areas: "title title title"
+    "feature-article feature-article cover-image"
+    "secondary-article secondary-article cover-image"
+    "small-article1 small-article2 small-article3";
+    max-width: 900px;
+    width: 100%;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    font-family: 'Lora', serif;
+    padding: 40px 20px;
+}
+
+.title{
+    grid-area: title;
+    text-align: center;
+    padding-bottom: 12px;
+    border-bottom: 3px double #1a1a1a;
+}
+
+.title::before{
+    content: "21 July | JOHANNESBURG";
+    font-size: 14px;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 12px;
+    color: #363030;
+}
+
+.cover-image img{
+    max-width: 100%;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.cover-image{
+    grid-area: cover-image;
+    border: 1px solid #ccc;
+    margin: 0;
+}
+
+.feature-article{
+    grid-area: feature-article;
+    border-right: 1px solid #ccc;
+    padding-right: 20px;
+}
+
+.feature-article h2{
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 12px;
+}
+
+.feature-article p::first-letter{
+    font-size: 46px;
+    float: left;
+    line-height: 0.9;
+    font-family: 'Playfair Display', serif;
+}
+
+.secondary-article{
+    grid-area: secondary-article;
+    border-right: 1px solid #ccc;
+    padding-right: 20px;
+    border-top: 1px solid #ccc;
+}
+
+.small-article1{
+    grid-area: small-article1;
+}
+
+.small-article2{
+    grid-area: small-article2;
+}
+
+.small-article3{
+    grid-area: small-article3;
+}
+
+.feature-article p,
+.secondary-article p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
+[class^="small-article"] {
+    border-top: 2px solid #1a1a1a;
+    padding-top: 10px;
+}
+
+[class^="small-article"] h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+[class^="small-article"] p {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #444;
+}
+
+@media (max-width: 700px) {
+    .newspaper-layout {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto auto;
+        grid-template-areas:
+            "title"
+            "feature-article"
+            "cover-image"
+            "secondary-article"
+            "small-article1"
+            "small-article2"
+            "small-article3";
+    }
+    .feature-article, .secondary-article {
+        border-right: none;
+    }
+}
+
