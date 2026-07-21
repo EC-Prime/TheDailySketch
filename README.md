@@ -4,7 +4,7 @@ A responsive newspaper front page built with pure HTML and CSS Grid, as part of 
 
 **[Live Demo](https://dailysketch21.netlify.app/)**
 
-![preview](Screenshot.PNG)
+![preview](Screenshot.png)
 
 ## Overview
 
